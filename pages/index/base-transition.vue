@@ -49,20 +49,6 @@ export default {
     margin-bottom: -1px;
   }
 
-  .slide-top {
-    &-enter,
-    &-leave-to {
-      opacity: 0;
-      transform: scaleY(0);
-    }
-
-    &-enter-active,
-    &-leave-active{
-      transform-origin: center top;
-      transition: transform .3s, opacity .3s;
-    }
-  }
-
   page {
     @include anim(fade) {
       opacity: 0;

@@ -1,6 +1,6 @@
 {
     "name" : "arm-liang-transition",
-    "appid" : "__UNI__EBBFDE1",
+    "appid" : "",
     "description" : "",
     "versionName" : "1.0.0",
     "versionCode" : "100",
@@ -57,7 +57,7 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wxc806ac6db91e5d17",
+        "appid" : "",
         "setting" : {
             "urlCheck" : false,
             "es6" : false

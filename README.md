@@ -1,6 +1,6 @@
 # my-transition,仿transition的跨平台实现
 
-> 仿照vue原生transition用法的跨平台transition组件，用法transition相似
+> 仿照vue原生transition用法的跨平台uni-app transition组件，用法transition相似
 
 ## 原理
 - 实现原理非常简单，由于小程序端无法直接操作dom，就自己添加一层包装

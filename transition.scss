@@ -1,0 +1,66 @@
+.mask-fade {
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+  }
+
+  &-enter-active,
+  &-leave-active {
+    transition: opacity .3s ease;
+  }
+}
+
+.dialog-bounce {
+  // !!!!!!!!!!!!!! 不能在小程序里面使用 css animation 动画 ，不然会阻塞动画定时器的判断，造成动画卡顿
+  //@keyframes dialogAnimation {
+  //  0% {
+  //    opacity: 0;
+  //    // 保持 translateX -50%
+  //    transform: translateX(-50%) scale(.3);
+  //  }
+  //
+  //  50% {
+  //    transform: translateX(-50%) scale(1);
+  //  }
+  //
+  //  90% {
+  //    transform: translateX(-50%) scale(1.1);
+  //  }
+  //
+  //  to {
+  //    transform: translateX(-50%) scale(1);
+  //  }
+  //}
+  //
+  //&-enter-active {
+  //  .dialog-body {
+  //    animation: dialogAnimation .3s;
+  //  }
+  //}
+  //
+  //&-leave-active {
+  //  .dialog-body {
+  //    animation: dialogAnimation .3s reverse;
+  //  }
+  //}
+
+  // 用简单的 css transition 动画
+  &-enter,
+  &-leave-to {
+    // 设置 dialog-body scale 动画不行，因为transition-origin不稳定，还是设置dialog-wrap...
+    // 使用translateY 动画。。。
+
+    .dialog-wrap {
+      opacity: 0;
+      //transform: scale(1.3);
+      transform: translateY(-20px);
+    }
+  }
+
+  &-enter-active,
+  &-leave-active {
+    .dialog-wrap {
+      transition: opacity .3s, transform .3s;
+    }
+  }
+}

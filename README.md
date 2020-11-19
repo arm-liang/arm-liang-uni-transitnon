@@ -9,9 +9,9 @@
 - 在hide->show的时候，需要提前把value设置成true，然后延迟20毫秒，强制刷新才有开始动画
 - 小程序由于setTimeout 20 执行远大于预期，使用阻塞微任务队列的方式替代
 
-## 特别说明1 不用使用css animation动画
+## 特别说明1 不要使用css animation动画
 - 由于小程序平台受限如果在`v-enter-active` `v-leave-active`使用`animation`动画会造成小程序定时器预计时间远大于预期，表现的效果就是动画结束比较卡
-- 所有最好不用使用 `animation`，如果要实现animation动画，请在对应事件`before-xxx`使用 `uni.createAnimation`创建动画，然后通过`my-transition`做包装帮你执行`v-show` `v-if`
+- 所有最好不要使用 `animation`，如果要实现animation动画，请在对应事件`before-xxx`使用 `uni.createAnimation`创建动画，然后通过`my-transition`做包装帮你执行`v-show` `v-if`
 
 ## 特别说明2 注意写css transition的位置
 - 由于小程序平台受限，如果是在**自定义组件里面编写的 css transition 动画将无效**
